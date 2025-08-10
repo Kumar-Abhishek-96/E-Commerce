@@ -22,7 +22,7 @@ public class CategoryController {
             Integer pageNumber,
             @RequestParam(name = "pageSize",defaultValue = AppConstants.DEFAULT_PAGE_SIZE,required = false)
             Integer pageSize,
-            @RequestParam(name = "sortBy",defaultValue = AppConstants.DEFAULT_SORT_BY, required = false)
+            @RequestParam(name = "sortBy",defaultValue = AppConstants.DEFAULT_SORT_CATEGORIES_BY, required = false)
             String sortBy,
             @RequestParam(name = "sortOrder",defaultValue = AppConstants.DEFAULT_SORT_ORDER, required = false)
             String sortOrder ){
