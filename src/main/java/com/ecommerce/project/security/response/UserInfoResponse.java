@@ -3,23 +3,22 @@ package com.ecommerce.project.security.response;
 import java.util.List;
 
 public class UserInfoResponse {
-
     private Long id;
     private String jwtToken;
-
     private String username;
+    private String email;
     private List<String> roles;
 
-    public UserInfoResponse(Long id,
-                            String jwtToken, String username, List<String> roles) {
+
+    public UserInfoResponse(Long id, String username, List<String> roles) {
         this.id = id;
-        this.jwtToken = jwtToken;
         this.username = username;
         this.roles = roles;
     }
 
-    public UserInfoResponse(Long id, String username, List<String> roles) {
+    public UserInfoResponse(Long id, String jwtToken, String username, List<String> roles) {
         this.id = id;
+        this.jwtToken = jwtToken;
         this.username = username;
         this.roles = roles;
     }
@@ -54,5 +53,13 @@ public class UserInfoResponse {
 
     public void setRoles(List<String> roles) {
         this.roles = roles;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
